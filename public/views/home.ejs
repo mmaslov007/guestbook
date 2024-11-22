@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+    <script src="/scripts/script.js" defer></script>
+    <link rel="icon" href="/images/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Contact Form</h1>
+
+        <form method="post" action="/submit">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="fname">First Name:</label>
+                    <input type="text" id="fname" name="fname">
+                    <span class="err" id="fname-err">Field is required</span>
+                </div>
+                <div class="form-group">
+                    <label for="lname">Last Name:</label>
+                    <input type="text" id="lname" name="lname">
+                    <span class="err" id="lname-err">Field is required</span>
+                </div>
+                <div class="form-group">
+                    <label for="job_title">Job Title:</label>
+                    <input type="text" id="job_title" name="job_title">
+                    <span class="err" id="job-err">Field is required</span>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="company">Company:</label>
+                    <input type="text" id="company" name="company">
+                    <span class="err" id="company-err">Field is required</span>
+                </div>
+                <div class="form-group">
+                    <label for="linkedin">LinkedIn URL:</label>
+                    <input type="url" id="linkedin" name="linkedin">
+                    <span class="err" id="linkedin-err">Field is required</span>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="text" id="email" name="email">
+                    <span class="err" id="email-err"></span>
+                </div>
+            </div>
+
+            <div class="form-row-three">
+                <div class="form-group-three">
+                    <label for="howWeMet">How did we meet?</label>
+                    <select id="howWeMet" name="howWeMet">
+                        <option value="" disabled selected>Please select</option>
+                        <option value="meetup">Meetup</option>
+                        <option value="jobFair">Job Fair</option>
+                        <option value="conference">Conference</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <span class="err" id="howWeMet-err">Field is required</span>
+                </div>
+                <div class="form-group-three" id="other-field-container">
+                    <label for="other">Other (please specify):</label>
+                    <input type="text" id="other" name="other">
+                    <span class="err" id="other-err">Field is required</span>
+                </div>
+            </div>
+
+            <div class="form-row-message">
+                <div class="form-group-message">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message"></textarea>
+                    <span class="err" id="message-err">Field is required</span>
+                </div>
+            </div>
+
+            <div class="contact-group">
+                <label>
+                    <input type="checkbox" name="mailing-list"> Please add me to your mailing list
+                </label>
+
+                <div class="contact-row">
+                    <label>Choose an email format:</label>
+                    <label><input type="radio" name="emailFormat" value="html"> HTML</label>
+                    <label><input type="radio" name="emailFormat" value="text"> Text</label>
+                </div>
+            </div>
+
+            <div class="button-container">
+                <button type="submit" id="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

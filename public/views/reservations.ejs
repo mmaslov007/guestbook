@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="icon" href="/images/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+    <h1>Guestbook Entries</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Job Title</th>
+                <th>Company</th>
+                <th>LinkedIn</th>
+                <th>Email</th>
+                <th>Message</th>
+                <th>Mailing List</th>
+                <th>Date Submitted</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% entries.forEach(entry=> { %>
+                <tr>
+                    <td>
+                        <%= entry.fname %>
+                    </td>
+                    <td>
+                        <%= entry.lname %>
+                    </td>
+                    <td>
+                        <%= entry.job_title %>
+                    </td>
+                    <td>
+                        <%= entry.company %>
+                    </td>
+                    <td><a href="<%= entry.linkedin %>">
+                            <%= entry.linkedin %>
+                        </a></td>
+                    <td>
+                        <%= entry.email %>
+                    </td>
+                    <td>
+                        <%= entry.message %>
+                    </td>
+                    <td>
+                        <%= entry.mailing_list ? 'Yes' : 'No' %>
+                    </td>
+                    <td>
+                        <%= entry.date_submitted %>
+                    </td>
+                </tr>
+                <% }); %>
+        </tbody>
+    </table>
+</body>
